@@ -1,7 +1,7 @@
-"use client"
+
 
 import { useState } from "react"
-import Link from "next/link"
+import { Link } from "react-router-dom"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -104,9 +104,9 @@ export default function Navbar() {
               >
                 Tienda River
               </a>
-              <a href="/patrocinadores" className="hover:text-primary transition">
+              <Link to="/patrocinadores" className="hover:text-primary transition">
                 Patrocinadores
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 font-bold text-2xl">
+          <Link to="/" className="flex-shrink-0 font-bold text-2xl">
             CARP
           </Link>
 
@@ -125,7 +125,7 @@ export default function Navbar() {
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
-                  href={item.href}
+                  to={item.href}
                   className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition flex items-center gap-1"
                 >
                   {item.label}
@@ -138,7 +138,7 @@ export default function Navbar() {
                     {item.submenu.map((subitem) => (
                       <Link
                         key={subitem.href}
-                        href={subitem.href}
+                        to={subitem.href}
                         className="block px-4 py-2 text-sm hover:bg-primary/90 transition first:rounded-t-md last:rounded-b-md"
                       >
                         {subitem.label}
@@ -172,7 +172,7 @@ export default function Navbar() {
               <div key={item.label}>
                 <div className="flex items-center justify-between">
                   <Link
-                    href={item.href}
+                    to={item.href}
                     className="block flex-1 px-3 py-2 rounded-md text-sm font-medium hover:bg-primary/90 transition"
                     onClick={() => !item.submenu && setIsMobileOpen(false)}
                   >
@@ -197,7 +197,7 @@ export default function Navbar() {
                     {item.submenu.map((subitem) => (
                       <Link
                         key={subitem.href}
-                        href={subitem.href}
+                        to={subitem.href}
                         className="block px-3 py-2 text-sm hover:bg-primary/90 rounded-md transition"
                         onClick={() => setIsMobileOpen(false)}
                       >

@@ -1,5 +1,5 @@
+import PageHeader from "../../components/PageHeader"
 import { Button } from "@/components/ui/button"
-import PageHeader from "@/components/PageHeader"
 
 export default function CarnetUnico() {
   return (

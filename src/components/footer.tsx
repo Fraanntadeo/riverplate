@@ -1,4 +1,4 @@
-"use client"
+
 
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
 
